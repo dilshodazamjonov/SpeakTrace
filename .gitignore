@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.python-version
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Data (large audio archives and extracted files)
+ml/data/
+*.zip
+*.csv
+*.flac
+*.wav
+
+# Trained models / checkpoints
+ml/models/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment / secrets
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
