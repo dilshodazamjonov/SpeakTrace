@@ -18,5 +18,13 @@ What i did:
 
 2. Perform basic EDA on the Parquet manifest.
 
+What I did:
+
+1. Did analysis of how scores distribution differ from Train to Dev
+2. Plots on score distributions 
+3. does speaking time impact score positively - Gotten Answer - YES. most of the answers whcih were answered they took 5 while being at 100s but that works only in part 1 and 3
 
 
+-- DONE
+
+3. 
