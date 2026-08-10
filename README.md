@@ -2,9 +2,9 @@
 
 1. Extract the name from the csvs and compare for existance and save to the processed paths as parquests.
 
-| submission_id | part | audio_paths | score | split |
-|---------------|------|-------------|-------|-------|
-| SI12BD-00030 | P1 | [data/train/SI12BD-00030-P10001.flac, ...P10002.flac, ...P10003.flac] | 4.0 | train |
+| submission_id | part | audio_paths                                                            | score | split |
+|---------------|------|------------------------------------------------------------------------|-------|-------|
+| SI12BD-00030  | P1   | [data/train/SI12BD-00030-P10001.flac, ...P10002.flac, ...P10003.flac]  | 4.0   | train |
 
 What i did: 
 
@@ -46,4 +46,9 @@ Overall RMSE: 0.6706 — primary number to beat
 
 -- Done
 
-4. 
+4. Build the audio feature extractor for `Baseline 1` and test it on a small sample
+
+deliverable today should be something like:
+
+| submission_id | part | duration | silence_ratio | rms_mean | mfcc_1_mean | ... | score |
+|---------------|------|----------|---------------|----------|-------------|-----|-------|
