@@ -27,4 +27,23 @@ What I did:
 
 -- DONE
 
-3. 
+3. Train a baseline model and model evbaluation
+
+What i did:
+
+1. Build a evaluation function which returns dict of metrics like: `RMSE`, `MAE`, `Bias`, `Pearson and Spearman correlations` and etc.
+2. Train mean per parts and tested on Dev getting following metric results:
+
+```
+Overall RMSE: 0.6706 — primary number to beat
+    Pooled part RMSE: 0.7507
+    P1: 0.7870
+    P3: 0.7381
+    P4: 0.7267
+    P5: 0.7496
+```
+
+
+-- Done
+
+4. 

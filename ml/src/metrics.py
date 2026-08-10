@@ -63,7 +63,7 @@ def core_metrics(y_true, y_pred) -> dict:
     return {
         'n': len(y_true),
         'rmse': rmse(y_true, y_pred),
-        'mse': mae(y_true, y_pred),
+        'mae': mae(y_true, y_pred),
         'bias': bias(y_true, y_pred),
         'pearson': pearson(y_true, y_pred),
         'spearman': spearman(y_true, y_pred),
@@ -86,9 +86,16 @@ def evaluate(df: pd.DataFrame) -> dict:
 
     sub = df.groupby('submission_id')[["y_true", "y_pred"]].mean()
 
-    return {
+    result = {
         "overall": core_metrics(sub["y_true"], sub["y_pred"]),
         "parts": core_metrics(df["y_true"], df["y_pred"]),
     }
 
+    for part in df['part'].unique():
+
+        part_df = df[df['part'] == part][["y_true", "y_pred"]]
+
+        result[part] = core_metrics(part_df["y_true"] , part_df['y_pred'])
+
+    return result
     
